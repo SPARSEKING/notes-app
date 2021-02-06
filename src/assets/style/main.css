@@ -5,6 +5,11 @@ html {
     height: 100%;
 }
 
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 body {
     font-size: 18px;
     font-weight: 400px;
@@ -83,8 +88,8 @@ textarea {
     align-self: center;
     border-radius: 10px;
     font-size: 18px;
-    background: rgb(89, 119, 255);
-    border-color: rgb(89, 119, 255);
+    background: #402caf;
+    border-color: #402caf;
     color: #FFF;
 }
 
@@ -119,6 +124,30 @@ textarea {
     justify-content: space-between;
 }
 .note-header p {
-    color: rgb(43, 83, 212);
+    color: #402caf;
     font-size: 22px;
+}
+
+.note-head {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg {
+    margin-right: 12px;
+    color: #999;
+}
+
+.active {
+   color: #402caf;
+}
+
+svg:last-child {
+    margin-right: 0px;
+}
+
+.full {
+    width: 100%;
 }

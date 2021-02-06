@@ -1,7 +1,7 @@
 <template>
 
 <div class="notes">
-    <div class="note" v-for='(note, index) in notes' :key='index'>
+    <div class="note" :class="{ full: !grid}" v-for='(note, index) in notes' :key='index'>
         <div class="note-header">
             <p >{{ note.title }}</p>
             <p style="cursor: pointer;" @click="removeNote(index)">x</p>
@@ -20,6 +20,10 @@ export default {
     props: {
         notes: {
             type: Array,
+            required: true
+        },
+        grid: {
+            type: Boolean,
             required: true
         }
     },
